@@ -16,9 +16,8 @@ WORKDIR /usr/app
 
 COPY --from=build /usr/app ./
 
-ENV DATABASE_CLIENT=pg
-ENV DATABASE_URL=./db/app.db
-ENV PORT=3333
+ARG DATABASE_CLIENT
+ARG DATABASE_URL
 
 RUN npm run knex -- migrate:latest
 
