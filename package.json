@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "commit": "git-cz",
     "lint": "eslint src --ext .tsx,.ts",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "build": "tsup src"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +35,7 @@
     "husky": "^8.0.3",
     "prettier": "^2.8.3",
     "supertest": "^6.3.3",
+    "tsup": "^6.6.0",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5",
     "vitest": "^0.28.4"
