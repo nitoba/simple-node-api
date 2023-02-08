@@ -19,6 +19,9 @@ COPY --from=build /usr/app ./
 ARG DATABASE_CLIENT
 ARG DATABASE_URL
 
+ENV DATABASE_URL $DATABASE_URL
+ENV DATABASE_CLIENT $DATABASE_CLIENT
+
 RUN npm run knex -- migrate:latest
 
 ENTRYPOINT [ "npm", "run", "start" ]
