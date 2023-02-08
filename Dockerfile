@@ -20,4 +20,4 @@ ENV DATABASE_CLIENT=pg
 ENV DATABASE_URL=./db/app.db
 ENV PORT=3333
 
-RUN npm run start
+ENTRYPOINT [ "npm", "run", "start" ]
