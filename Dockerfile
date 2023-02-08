@@ -4,7 +4,7 @@ WORKDIR /usr/app
 
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 
@@ -19,5 +19,7 @@ COPY --from=build /usr/app ./
 ENV DATABASE_CLIENT=pg
 ENV DATABASE_URL=./db/app.db
 ENV PORT=3333
+
+RUN npm run knex -- migrate:latest
 
 ENTRYPOINT [ "npm", "run", "start" ]
