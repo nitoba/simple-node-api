@@ -11,7 +11,6 @@
     "test": "vitest",
     "dev": "tsx --watch src/server.ts",
     "knex": "node --loader tsx ./node_modules/.bin/knex",
-    "prepare": "husky install",
     "commit": "git-cz",
     "lint": "eslint src --ext .tsx,.ts",
     "lint:fix": "npm run lint -- --fix",

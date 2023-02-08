@@ -27,4 +27,4 @@ RUN echo $DATABASE_CLIENT
 
 RUN npm run knex -- migrate:latest
 
-ENTRYPOINT [ "npm", "run", "start" ]
+CMD [ "npm", "run", "start" ]
